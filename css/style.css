@@ -1,0 +1,386 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4169E1;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite que os itens sejam movidos para a próxima linha em telas menores */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Usa uma unidade responsiva */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links de navegação se ajustem */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background-color: #A4D2FF;
+    border-radius: 5px;
+}
+
+main .principal {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+main h2 {
+    margin-bottom: 20px;
+    font-size: 1.75rem; /* Usa uma unidade responsiva */
+}
+
+.produto-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Distribui o espaço entre os produtos */
+}
+
+.produto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    max-width: calc(33.333% - 40px);
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    margin: 10px 0;
+    font-size: 1.25rem; /* Usa uma unidade responsiva */
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.produto button {
+    background-color: #4191E1;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.produto button:hover {
+    background-color: #A4D2FF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Faz os inputs ocuparem 100% da largura disponível */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+form button:hover {
+    background-color: #A4D2FF;
+}
+/*
+footer {
+    background-color: rgb(65, 105, 225);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}*/
+
+footer {
+    background-color: rgb(65, 105, 225);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+    header .principal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .produto {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/*Divs para a parte dos contatos*/
+.Instagram{
+    margin: 20px;
+    padding: 40px;
+}
+.Whatsapp{
+    margin: 20px;
+    padding: 40px;
+}
+.Email{
+    margin: 20px;
+    padding: 40px;
+}
+
+.email_div{
+    margin: 15px;
+}
+
+/* Página do produto - Página de compra */
+
+.product {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    margin: auto;
+    padding: auto;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    padding: 20px;
+    flex: 1;
+}
+
+.product-details h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.price {
+    font-size: 1.25em;
+    color: hsl(215, 78%, 40%);
+    margin-bottom: 20px;
+}
+
+.quantity, .flavors {
+    margin-bottom: 20px;
+}
+
+.quantity label, .flavors label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.quantity input, .flavors select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.buy-button {
+    background-color: rgb(65, 105, 225);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.buy-button:hover {
+    background-color: rgb(209, 205, 175);
+}
+/*Página de Login e Registro*/
+
+.imagem{
+    background-image: url(/assets/wallpaper\ trembo.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: auto; 
+    margin: auto;
+    padding: auto;
+}
+.login-container {
+    padding: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffff;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o botão de remover no carrinho */
+button.remover {
+    background-color: #FF6347; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 2px 5px; /* Ajuste do padding para ser mais compacto */
+    cursor: pointer; /* Mão ao passar o mouse */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 0.875rem; /* Tamanho da fonte */
+    margin-left: 5px; /* Espaço entre o texto do item e o botão */
+    width: auto; /* Largura automática */
+    max-width: 80px; /* Define uma largura máxima */
+    display: inline-block; /* Garante que o botão não expanda para a largura total */
+}
+
+button.remover:hover {
+    background-color: #FF7F50; /* Cor do botão ao passar o mouse */
+}
+
+button.finalizar-compra {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 5px 10px; /* Ajuste do padding para ser mais compacto */
+    cursor: pointer; /* Mão ao passar o mouse */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 0.875rem; /* Tamanho da fonte reduzido */
+    max-width: 150px; /* Largura máxima */
+    display: inline-block; /* Garante que o botão não expanda para a largura total */
+}
+
+button.finalizar-compra:hover {
+    background-color: #A4D2FF; /* Cor ao passar o mouse */
+}
+
